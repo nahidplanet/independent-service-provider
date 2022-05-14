@@ -1,7 +1,13 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
-const Service = ({service,handleService}) => {
+
+const Service = ({service}) => {
     const {id,title,discription,img, place,price}=service;
+    const navigate = useNavigate();
+    const handleService = (id) => {
+        navigate(`/services/${id}`)
+    }
     return (
         <div className='service w-[350px] pb-5 border  mx-auto mb-10 sm:mb-0 rounded-md '>
             <div className="service-image">
