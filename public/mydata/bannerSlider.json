@@ -1,0 +1,32 @@
+[
+    {
+        "id":"1",
+        
+        "moto":"Explore Your Travel",
+        "title":"Start planning your dream trip today!",
+        "description": "I travel not to go anywhere, but to go. I travel for travel's sake the great affair is to move.",
+        "img":"https://i.ibb.co/2vTczFh/10004.png"
+    },
+    {
+        "id":"2",
+        "moto":"Explore Your Travel",
+        "title":"Trusted Travel Agency",
+        "description": "I travel not to go anywhere, but to go. I travel for travel's sake the great affair is to move.",
+        "img":"https://i.ibb.co/Ns38Pvc/10010.png"
+
+    },
+    {
+        "id":"3",
+        "moto":"Explore Your Travel",
+        "title":"Get Exclusive Tour",
+        "description": "I travel not to go anywhere, but to go. I travel for travel's sake the great affair is to move.",
+        "img":"https://i.ibb.co/9yYLK4r/10011.png"
+
+    }
+]
+
+
+
+
+
+

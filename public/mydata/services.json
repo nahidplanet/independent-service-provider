@@ -1,0 +1,107 @@
+[
+    {
+        "id":1,
+        "title":"A Good Traveler Has No Fixed Plans And Is Not Intent On Arriving.",
+        "discription":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown to printer took a galley of type and scrambled it to make a type specimen book. It has that's survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+        "place":"Kuala Lumpur, Malaysia",
+        "price":500,
+        "advantages":[
+            "Cruise dinner & music event",
+            "3 Meal per day",
+            "Pick and drop services",
+            "Smoking allow",
+            "Valet parking",
+            "Visit 4 best places with group"
+        ],
+        "img":"https://i.ibb.co/tsQCFps/10018.png"
+
+    },
+    {
+        "id":2,
+        "title":"A Good Traveler Has No Fixed Plans And Is Not Intent On Arriving.",
+        "discription":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown to printer took a galley of type and scrambled it to make a type specimen book. It has that's survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+        "place":"Kuala Lumpur, Malaysia",
+        "price":750,
+        "advantages":[
+            "Cruise dinner & music event",
+            "3 Meal per day",
+            "Pick and drop services",
+            "Smoking allow",
+            "Valet parking",
+            "Visit 4 best places with group"
+        ],
+        "img":"https://i.ibb.co/X3h8mcH/10019.png"
+
+    },
+    {
+        "id":3,
+        "title":"A Good Traveler Has No Fixed Plans And Is Not Intent On Arriving.",
+        "discription":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown to printer took a galley of type and scrambled it to make a type specimen book. It has that's survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+        "place":"Kuala Lumpur, Malaysia",
+        "price":800,
+        "advantages":[
+            "Cruise dinner & music event",
+            "3 Meal per day",
+            "Pick and drop services",
+            "Smoking allow",
+            "Valet parking",
+            "Visit 4 best places with group"
+        ],
+        "img":"https://i.ibb.co/2S7p0NG/10020.png"
+
+    },
+    {
+        "id":4,
+        "title":"A Good Traveler Has No Fixed Plans And Is Not Intent On Arriving.",
+        "discription":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown to printer took a galley of type and scrambled it to make a type specimen book. It has that's survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+        "place":"Kuala Lumpur, Malaysia",
+        "price":1000,
+        "advantages":[
+            "Cruise dinner & music event",
+            "3 Meal per day",
+            "Pick and drop services",
+            "Smoking allow",
+            "Valet parking",
+            "Visit 4 best places with group"
+        ],
+        "img":"https://i.ibb.co/F5DrTrQ/10026.png"
+
+    },
+    {
+        "id":5,
+        "title":"A Good Traveler Has No Fixed Plans And Is Not Intent On Arriving.",
+        "discription":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown to printer took a galley of type and scrambled it to make a type specimen book. It has that's survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+        "place":"Kuala Lumpur, Malaysia",
+        "price":1200,
+        "advantages":[
+            "Cruise dinner & music event",
+            "3 Meal per day",
+            "Pick and drop services",
+            "Smoking allow",
+            "Valet parking",
+            "Visit 4 best places with group"
+        ],
+        "img":"https://i.ibb.co/zfBLL84/10027.png"
+
+    },
+    {
+        "id":6,
+        "title":"A Good Traveler Has No Fixed Plans And Is Not Intent On Arriving.",
+        "discription":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown to printer took a galley of type and scrambled it to make a type specimen book. It has that's survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+        "place":"Kuala Lumpur, Malaysia",
+        "price":1250,
+        "advantages":[
+            "Cruise dinner & music event",
+            "3 Meal per day",
+            "Pick and drop services",
+            "Smoking allow",
+            "Valet parking",
+            "Visit 4 best places with group"
+        ],
+        "img":"https://i.ibb.co/tsQCFps/10018.png"
+
+    }
+]
+
+
+
