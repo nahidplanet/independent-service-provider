@@ -1,7 +1,7 @@
 import { signOut } from 'firebase/auth';
 import React, { useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../Firebase/firebase.init';
 import CustomLink from '../CustomLink/CustomLink';
 
@@ -9,7 +9,18 @@ const Header = () => {
     const [openProfile, setProfile] = useState(false);
     const [openMobileMenu, setOpenMobileMenu] = useState(false);
     const [user, loading, error] = useAuthState(auth);
-    
+    const navigate = useNavigate();
+
+    let userName ;
+    let userEmail;
+    if (user) {
+        userName = user.displayName;
+        userEmail = user.email;
+    }
+    const handleSingout =() => {
+        signOut(auth);
+        navigate('/home');
+    }
 
     return (
         <header className=''>
@@ -22,13 +33,20 @@ const Header = () => {
                     <div className="flex items-center md:order-2">
                         <button type="button" className="flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="dropdown">
                             <span className="sr-only">Open user menu</span>
-                            <img onClick={() => setProfile(!openProfile)} className="w-[42px] h-10 rounded-full border-2  border-[#FDC703]" src="https://i.ibb.co/YjMwFFR/user-default-2.png" alt="userphoto" />
+                            {
+                                user ?
+                                    <img onClick={() => setProfile(!openProfile)} className="w-[42px] h-10 rounded-full border-2  border-[#FDC703]" src={user?.photoURL} alt="userphoto" />
+
+                                    :
+                                    <img onClick={() => setProfile(!openProfile)} className="w-[42px] h-10 rounded-full border-2  border-[#FDC703]" src="https://i.ibb.co/YjMwFFR/user-default-2.png" alt="userphoto" />
+
+                            }
                         </button>
 
                         <div className={`${openProfile ? 'block absolute top-10 right-10' : 'hidden'} z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600 position: absolute; inset: auto auto 0px 0px; margin: 0px; transform: translate(956px, 1081px)`} id="dropdown" >
                             <div className="py-3 px-4">
-                                <span className="block text-sm text-gray-900 dark:text-white">Bonnie Green</span>
-                                <span className="block text-sm font-medium text-gray-500 truncate dark:text-gray-400">name@flowbite.com</span>
+                                <span className="block text-sm text-gray-900 dark:text-white">{userName&&userName}</span>
+                                <span className="block text-sm font-medium text-gray-500 truncate dark:text-gray-400">{userEmail&&userEmail}</span>
                             </div>
                             <ul className="py-1" aria-labelledby="dropdown">
                                 <li>
@@ -41,7 +59,7 @@ const Header = () => {
                                     <Link to={"/"} className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Earnings</Link>
                                 </li>
                                 <li>
-                                    <Link to={"/"} className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</Link>
+                                    <p onClick={handleSingout} className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</p>
                                 </li>
                             </ul>
                         </div>
@@ -67,7 +85,7 @@ const Header = () => {
                             </li>
                             {user ?
                                 <li>
-                                    <p onClick={()=>signOut(auth)} className="cursor-pointer block py-2 pr-4 pl-3  border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 md:text-md">Logout</p>
+                                    <p onClick={handleSingout} className="cursor-pointer block py-2 pr-4 pl-3  border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 md:text-md">Logout</p>
                                 </li>
                                 :
                                 <li >

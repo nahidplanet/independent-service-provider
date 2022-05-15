@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../Firebase/firebase.init';
+import SocialLogin from '../Shared/SocialLogin/SocialLogin';
 
 const Ragistration = () => {
     const navigate = useNavigate();
@@ -10,7 +11,6 @@ const Ragistration = () => {
     const emailRef = useRef('');
     const passwordRef = useRef('');
     const confirmPasswordRef = useRef('');
-    console.log(checked);
     const [
         createUserWithEmailAndPassword,
         user,
@@ -38,9 +38,9 @@ const Ragistration = () => {
 
 
     return (
-        <div className='flex justify-center items-center h-[100vh]'>
-            <div className="w-10/12 sm:w-6/12 md:w-5/12 lg:w-5/12">
-                <h1 className='text-center font-bold text-4xl'>Ragistration</h1>
+        <div className='flex justify-center items-center h-[100vh]]'>
+            <div className="w-[320px] sm:w-6/12 md:w-5/12 lg:w-4/12">
+                <h1 className='text-center font-bold text-2xl md:text-4xl'>Ragistration</h1>
 
                 <form onSubmit={handleRagistration} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
                     <div className="mb-4">
@@ -84,6 +84,7 @@ const Ragistration = () => {
                     </div>
                     <p className='font-bold text-gray-700 text-sm mt-2 text-center'>Already Have a Account? <span onClick={() => navigate('/login')} className='text-[#cca001] cursor-pointer'>Login</span></p>
                 </form>
+                <SocialLogin></SocialLogin>
             </div>
         </div>
     );
