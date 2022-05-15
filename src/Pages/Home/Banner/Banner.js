@@ -5,7 +5,7 @@ const Banner = () => {
         <section className='flex'>
             <div className="banner-container mx-auto">
                 <div className="banner-row sm:flex mx-auto mt-20">
-                <div className="banner-right w-10/12 sm:w-5/12 flex justify-center mx-auto sm:order-2 order-1 lg:order-2 md:order-2 ">
+                    <div className="banner-right w-10/12 sm:w-5/12 flex justify-center mx-auto sm:order-2 order-1 lg:order-2 md:order-2 ">
                         <div className="block mx-auto">
                             <img className='sm:w-4/5  w-full' src="https://i.ibb.co/2vTczFh/10004.png" alt="banner1" />
                         </div>
@@ -23,7 +23,7 @@ const Banner = () => {
                         </div>
                     </div>
 
-                    
+
                 </div>
             </div>
 
