@@ -1,5 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import facebook from '../../../images/icons/facebook.png'
+import twitter from '../../../images/icons/twitter.png'
+import github from '../../../images/icons/github.png'
+import youtube from '../../../images/icons/youtube.png'
+import instagram from '../../../images/icons/instagram.png'
 
 const Footer = () => {
     const sal = new Date()
@@ -51,11 +56,11 @@ const Footer = () => {
                     <p>&copy; {newsal} All Right Reserved by theme_crazy</p>
                 </div>
                 <div className='flex mt-3 sm:mt-0'>
-                    <ul><li className='text-sm font-semibold border rounded-full mr-2'><Link to={'/home'}>fb</Link></li></ul>
-                    <ul><li className='text-sm font-semibold border rounded-full mr-2'><Link to={'/home'}>twitter</Link></li></ul>
-                    <ul><li className='text-sm font-semibold border rounded-full mr-2'><Link to={'/home'}>instagram</Link></li></ul>
-                    <ul><li className='text-sm font-semibold border rounded-full mr-2'><Link to={'/home'}>youtube</Link></li></ul>
-                    <ul><li className='text-sm font-semibold border rounded-full mr-2'><Link to={'/home'}>linDin</Link></li></ul>
+                    <ul><li className='text-sm font-semibold border rounded-full mr-2 w-6 h-6'><a target="_blank" href="https://facebook.com"> <img src={facebook} alt="fb"/></a></li></ul>
+                    <ul><li className='text-sm font-semibold border rounded-full mr-2 w-6 h-6'><a target="_blank" href="https://twitter.com"><img src={twitter} alt="fb"/></a></li></ul>
+                    <ul><li className='text-sm font-semibold border rounded-full mr-2 w-6 h-6'><a target="_blank" href="https://github.com"><img src={github} alt="fb"/></a></li></ul>
+                    <ul><li className='text-sm font-semibold border rounded-full mr-2 w-6 h-6'><a target="_blank" href="https://instagram.com"><img src={instagram} alt="fb"/></a></li></ul>
+                    <ul><li className='text-sm font-semibold border rounded-full mr-2 w-6 h-6'><a target="_blank" href="https://youtube.com"><img src={youtube} alt="fb"/></a></li></ul>
                 </div>
             </div>
         </footer>
