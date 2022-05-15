@@ -11,13 +11,13 @@ const Header = () => {
     const [user, loading, error] = useAuthState(auth);
     const navigate = useNavigate();
 
-    let userName ;
+    let userName;
     let userEmail;
     if (user) {
         userName = user.displayName;
         userEmail = user.email;
     }
-    const handleSingout =() => {
+    const handleSingout = () => {
         signOut(auth);
         navigate('/home');
     }
@@ -34,19 +34,20 @@ const Header = () => {
                         <button type="button" className="flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="dropdown">
                             <span className="sr-only">Open user menu</span>
                             {
-                                user ?
-                                    <img onClick={() => setProfile(!openProfile)} className="w-[42px] h-10 rounded-full border-2  border-[#FDC703]" src={user?.photoURL} alt="userphoto" />
+                                user?.photoURL ?
+                                    <span className='flex items-center'><span className='mr-3 hidden md:block    hover:text-white text-gray-500 font-bold md:text-md'>{userName}</span>
+                                        <img onClick={() => setProfile(!openProfile)} className="w-[42px] h-10 rounded-full border-2  border-[#FDC703]" src={user?.photoURL} alt="user" /></span>
 
                                     :
-                                    <img onClick={() => setProfile(!openProfile)} className="w-[42px] h-10 rounded-full border-2  border-[#FDC703]" src="https://i.ibb.co/YjMwFFR/user-default-2.png" alt="userphoto" />
+                                    <img onClick={() => setProfile(!openProfile)} className="w-[42px] h-10 rounded-full border-2  border-[#FDC703]" src="https://i.ibb.co/YjMwFFR/user-default-2.png" alt="user" />
 
                             }
                         </button>
 
                         <div className={`${openProfile ? 'block absolute top-10 right-10' : 'hidden'} z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600 position: absolute; inset: auto auto 0px 0px; margin: 0px; transform: translate(956px, 1081px)`} id="dropdown" >
                             <div className="py-3 px-4">
-                                <span className="block text-sm text-gray-900 dark:text-white">{userName&&userName}</span>
-                                <span className="block text-sm font-medium text-gray-500 truncate dark:text-gray-400">{userEmail&&userEmail}</span>
+                                <span className="block text-sm text-gray-900 dark:text-white">{userName && userName}</span>
+                                <span className="block text-sm font-medium text-gray-500 truncate dark:text-gray-400">{userEmail && userEmail}</span>
                             </div>
                             <ul className="py-1" aria-labelledby="dropdown">
                                 <li>

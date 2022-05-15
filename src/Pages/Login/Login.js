@@ -3,30 +3,39 @@ import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../Firebase/firebase.init';
 import SocialLogin from '../Shared/SocialLogin/SocialLogin';
+import { css } from "@emotion/react";
+import ClipLoader from "react-spinners/ClipLoader";
+
 
 const Login = () => {
     const navigate = useNavigate();
     let location = useLocation();
     const emailRef = useRef('');
     const passwordRef = useRef('');
+    let emailSinginError;
     const [
         createUserWithEmailAndPassword,
         user,
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
+    if (error) {
+        emailSinginError = <p className='text-red-600 text-lg font-bold'>{error?.message}</p>
+    }
     let from = location.state?.from?.pathname || "/";
 
     const handleSingin = (e) => {
         e.preventDefault();
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
-        console.log(email, password);
         createUserWithEmailAndPassword(email, password);
     }
     if (user) {
         console.log(user);
         navigate(from, { replace: true });
+    }
+    if (loading) {
+        
     }
     return (
         <div>
@@ -59,11 +68,12 @@ const Login = () => {
                         </div>
                         <p className='font-bold text-gray-700 text-sm mt-2'>New to Tourest ? <span onClick={() => navigate('/ragistration')} className='text-[#cca001] cursor-pointer'>Register</span> </p>
                     </form>
+                    {emailSinginError}
                     <SocialLogin></SocialLogin>
                 </div>
                 
             </div>
-            
+            {loading ? <ClipLoader color={'#EB1935'} loading={loading} size={150} />:" "}
         </div>
     );
 };
