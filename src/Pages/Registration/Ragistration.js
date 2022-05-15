@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from '../../Firebase/firebase.init';
 import SocialLogin from '../Shared/SocialLogin/SocialLogin';
 import Loader from '../Shared/Loader/Loader';
@@ -21,8 +21,8 @@ const Ragistration = () => {
         loading,
         error,
     ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
-
-    const handleRagistration = (e) => {
+    const [updateProfile, updating, errorProfile] = useUpdateProfile(auth)
+    const handleRagistration =async (e) => {
         e.preventDefault();
         const name = nameRef.current.value;
         const email = emailRef.current.value;
@@ -32,13 +32,14 @@ const Ragistration = () => {
             setErrorText('Two password not matching...');
 
         } else {
-            createUserWithEmailAndPassword(email, password);
+           await createUserWithEmailAndPassword(email, password);
+           await updateProfile({displayName:name});
         }
     }
     if (error) {
         emailSinginError = <p className='text-red-600 text-lg font-bold'>{error?.message}</p>
     }
-    if (loading) {
+    if (loading || updating ) {
         return <Loader></Loader>
     }
     if (user) {
