@@ -1,6 +1,8 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Checkout = () => {
+    const navigate = useNavigate();
 
     
     return (
@@ -45,8 +47,8 @@ const Checkout = () => {
                         </label>
                     </div>
                     <div className="flex items-center justify-between">
-                        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
-                            Registration
+                        <button onClick={()=>navigate('/done')} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                            Confirm
                         </button>
                     </div>
                     <p className='font-bold text-gray-700 text-sm mt-2 text-center'>Already Have a Account? <span className='text-[#cca001] cursor-pointer'>Login</span></p>

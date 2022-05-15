@@ -1,10 +1,11 @@
 import React, { useRef } from 'react';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../Firebase/firebase.init';
 
 const Login = () => {
     const navigate = useNavigate();
+    let location = useLocation();
     const emailRef = useRef('');
     const passwordRef = useRef('');
     const [
@@ -13,6 +14,8 @@ const Login = () => {
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
+    let from = location.state?.from?.pathname || "/"; 
+
     const handleSingin = (e) => {
         e.preventDefault();
         const email = emailRef.current.value;
@@ -22,7 +25,7 @@ const Login = () => {
     }
     if (user) {
         console.log(user);
-        navigate('/home');
+        navigate(from, { replace: true });
     }
     return (
         <div className='flex justify-center items-center h-[100vh]'>
