@@ -5,11 +5,12 @@ import auth from '../../../Firebase/firebase.init';
 import facebook from '../../../images/icons/facebook.svg';
 import github from '../../../images/icons/github.svg';
 import google from '../../../images/icons/google.svg';
+import Loader from '../../Shared/Loader/Loader'
 
 const SocialLogin = () => {
-    
+
     const navigate = useNavigate();
-    const [signInWithGoogle, userG, loadingG, errorG] = useSignInWithGoogle(auth);
+    const [signInWithGoogle, userG, loadingG, errorG] = useSignInWithGoogle(auth, { sendEmailVerification: true });
     const [signInWithGithub, userGit, loadingGit, errorGit] = useSignInWithGithub(auth);
     const [signInWithFacebook, userFB, loadingFB, errorFB] = useSignInWithFacebook(auth);
     let socialSinginError;
@@ -17,8 +18,11 @@ const SocialLogin = () => {
     if (userG || userGit || userFB) {
         navigate('/home');
     }
+    if (loadingG || loadingGit || loadingFB) {
+        return <Loader></Loader>
+    }
     if (errorG || errorGit || errorFB) {
-         socialSinginError = <p className='text-red-600 text-lg font-bold'> {errorG?.message} {errorFB?.message} {errorGit?.message} </p>
+        socialSinginError = <p className='text-red-600 text-lg font-bold'> {errorG?.message} {errorFB?.message} {errorGit?.message} </p>
     }
     return (
         <div className='flex justify-center w-full'>

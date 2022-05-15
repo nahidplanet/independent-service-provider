@@ -3,20 +3,24 @@ import { useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../Firebase/firebase.init';
 import SocialLogin from '../Shared/SocialLogin/SocialLogin';
+import Loader from '../Shared/Loader/Loader';
+import { sendEmailVerification } from 'firebase/auth';
 
 const Ragistration = () => {
     const navigate = useNavigate();
-    const [checked,setChecked] = useState(false);
+    const [checked, setChecked] = useState(false);
+    const [errorText, setErrorText] = useState('');
     const nameRef = useRef('');
     const emailRef = useRef('');
     const passwordRef = useRef('');
     const confirmPasswordRef = useRef('');
+    let emailSinginError;
     const [
         createUserWithEmailAndPassword,
         user,
         loading,
         error,
-      ] = useCreateUserWithEmailAndPassword(auth);
+    ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
     const handleRagistration = (e) => {
         e.preventDefault();
@@ -24,13 +28,18 @@ const Ragistration = () => {
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
         const confirmPassword = confirmPasswordRef.current.value;
-        console.log(name,email,password,confirmPassword);
         if (password !== confirmPassword) {
-            console.log("password not matching...");
-            
-        }else{
-            createUserWithEmailAndPassword(email,password);
+            setErrorText('Two password not matching...');
+
+        } else {
+            createUserWithEmailAndPassword(email, password);
         }
+    }
+    if (error) {
+        emailSinginError = <p className='text-red-600 text-lg font-bold'>{error?.message}</p>
+    }
+    if (loading) {
+        return <Loader></Loader>
     }
     if (user) {
         navigate('/home');
@@ -59,7 +68,7 @@ const Ragistration = () => {
                         <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password">
                             Password
                         </label>
-                        <input required  ref={passwordRef} className="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="******************" />
+                        <input required ref={passwordRef} className="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="******************" />
 
                     </div>
                     <div className="mb-4">
@@ -71,7 +80,7 @@ const Ragistration = () => {
                     </div>
                     <div className="flex justify-start mb-4">
                         <label className="md:w-2/3 block text-gray-500 font-bold">
-                            <input  onClick={()=>setChecked(!checked)} className="mr-2 leading-tight" type="checkbox" />
+                            <input onClick={() => setChecked(!checked)} className="mr-2 leading-tight" type="checkbox" />
                             <span className="text-sm">
                                 Send me your newsletter!
                             </span>
@@ -84,6 +93,8 @@ const Ragistration = () => {
                     </div>
                     <p className='font-bold text-gray-700 text-sm mt-2 text-center'>Already Have a Account? <span onClick={() => navigate('/login')} className='text-[#cca001] cursor-pointer'>Login</span></p>
                 </form>
+                <span className='text-red-600 text-lg font-bold'> {errorText}</span>
+                {emailSinginError}
                 <SocialLogin></SocialLogin>
             </div>
         </div>

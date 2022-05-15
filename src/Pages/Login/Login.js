@@ -3,8 +3,7 @@ import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../Firebase/firebase.init';
 import SocialLogin from '../Shared/SocialLogin/SocialLogin';
-import { css } from "@emotion/react";
-import ClipLoader from "react-spinners/ClipLoader";
+import Loader from '../Shared/Loader/Loader'
 
 
 const Login = () => {
@@ -35,7 +34,7 @@ const Login = () => {
         navigate(from, { replace: true });
     }
     if (loading) {
-        
+        return <Loader></Loader>
     }
     return (
         <div>
@@ -62,7 +61,7 @@ const Login = () => {
                             <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
                                 Sign In
                             </button>
-                            <Link to={''} className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" href="#">
+                            <Link to={'/rest-password'} className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" href="#">
                                 Forgot Password?
                             </Link>
                         </div>
@@ -71,9 +70,8 @@ const Login = () => {
                     {emailSinginError}
                     <SocialLogin></SocialLogin>
                 </div>
-                
+
             </div>
-            {loading ? <ClipLoader color={'#EB1935'} loading={loading} size={150} />:" "}
         </div>
     );
 };

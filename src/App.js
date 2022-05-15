@@ -14,6 +14,7 @@ import Checkout from './Pages/Checkout/Checkout';
 import Ragistration from './Pages/Registration/Ragistration';
 import Done from './Pages/Done/Done';
 import RequireAuth from './Pages/Shared/RequireAuth/RequireAuth';
+import ResetPassword from './Pages/ResetPassword/ResetPassword';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
         <Route path='/about' element={<About></About>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/ragistration' element={<Ragistration></Ragistration>}></Route>
+        <Route path='/rest-password' element={<ResetPassword></ResetPassword>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>

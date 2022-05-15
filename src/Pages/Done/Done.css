@@ -1,0 +1,8 @@
+.done{
+    background-image: url('https://i.ibb.co/MPkvSGF/payment-done.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 0 auto;
+    padding: 80px 60px;
+}
