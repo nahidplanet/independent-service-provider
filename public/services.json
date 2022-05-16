@@ -1,10 +1,10 @@
 [
     {
         "id":1,
-        "title":"A Good Traveler Has No Fixed Plans And Is Not Intent On Arriving.",
-        "discription":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown to printer took a galley of type and scrambled it to make a type specimen book. It has that's survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
-        "place":"Kuala Lumpur, Malaysia",
+        "title":"4 Days Bali Saver",
+        "discription":"The splendid island of Bali might seem small in size, but if you travel by Bali Indonesia tour package you will realize that it has diverse points of interest and incredible activities to do. By knowing more about the unique features and attractions of Bali, you can plan a more efficient Bali trip. We will help you to plan the best Bali tour package from India. Here are listed some answers to the doubts you might be having before traveling to this magical island.",
         "price":500,
+        "place":"Indoneshia, Bali",
         "advantages":[
             "Cruise dinner & music event",
             "3 Meal per day",
@@ -13,14 +13,14 @@
             "Valet parking",
             "Visit 4 best places with group"
         ],
-        "img":"https://i.ibb.co/tsQCFps/10018.png"
+        "img":"https://www.felixferiatravel.com/wp-content/uploads/2022/04/bali-pic-4.jpg"
 
     },
     {
         "id":2,
-        "title":"A Good Traveler Has No Fixed Plans And Is Not Intent On Arriving.",
-        "discription":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown to printer took a galley of type and scrambled it to make a type specimen book. It has that's survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
-        "place":"Kuala Lumpur, Malaysia",
+        "title":"5 Days Hong Kong Disneyland",
+        "discription":"Grab this wonderful 4 nights and 5 days customisable and best-selling Hong Kong tour package from India to make your vacation a memorable experience. Your Hong Kong trip itinerary will begin with the marvellous city tour of Hong Kong and later take you to the marine-themed Ocean Park and the dreamy world of With the amazing 4 Nights 5 days Hong Kong Disneyland tour packages, you would be able to experience the magic of Disney and all its cute and enchanting characters. See the many Disney stories come to life and experience the fun and magic..",
+        "place":"China, Hong Kong",
         "price":750,
         "advantages":[
             "Cruise dinner & music event",
@@ -35,9 +35,9 @@
     },
     {
         "id":3,
-        "title":"A Good Traveler Has No Fixed Plans And Is Not Intent On Arriving.",
-        "discription":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown to printer took a galley of type and scrambled it to make a type specimen book. It has that's survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
-        "place":"Kuala Lumpur, Malaysia",
+        "title":"3 Days Singapore River Safari",
+        "discription":"Visit River Safari in Singapore for a wildlife experience themed around the world's freshwater rivers. Wander around multiple river habitats, from the Yangtze to the Mississippi, to encounter animals of all types, including the beloved giant panda. Learn about the native animals and plants that are found around the world's legendary rivers, and take a boat ride on the Amazon River, if you wish (own expense). Hotel pickup and drop-off are included",
+        "place":"Singapore, Singapore",
         "price":800,
         "advantages":[
             "Cruise dinner & music event",
@@ -52,10 +52,10 @@
     },
     {
         "id":4,
-        "title":"A Good Traveler Has No Fixed Plans And Is Not Intent On Arriving.",
-        "discription":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown to printer took a galley of type and scrambled it to make a type specimen book. It has that's survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
-        "place":"Kuala Lumpur, Malaysia",
+        "title":"3 Days Singapore Universal Studios",
+        "discription":"Grab this wonderful 4 nights and 5 days customisable and best-selling Hong Kong tour package from India to make your vacation a memorable experience. Your Hong Kong trip itinerary will begin with the marvellous city tour of Hong Kong and later take you to the marine-themed Ocean Park and the dreamy world of With the amazing 4 Nights 5 days Hong Kong Disneyland tour packages, you would be able to experience the magic of Disney and all its cute and enchanting characters. See the many Disney stories come to life and experience the fun and magic..",
         "price":1000,
+        "place":"Singapore, Singapore",
         "advantages":[
             "Cruise dinner & music event",
             "3 Meal per day",
@@ -69,8 +69,8 @@
     },
     {
         "id":5,
-        "title":"A Good Traveler Has No Fixed Plans And Is Not Intent On Arriving.",
-        "discription":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown to printer took a galley of type and scrambled it to make a type specimen book. It has that's survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+        "title":"7 Days Bangkok, Singapore,Kuala Lumpur",
+        "discription":"The splendid island of Bali might seem small in size, but if you travel by Bali Indonesia tour package you will realize that it has diverse points of interest and incredible activities to do. By knowing more about the unique features and attractions of Bali, you can plan a more efficient Bali trip. We will help you to plan the best Bali tour package from India. Here are listed some answers to the doubts you might be having before traveling to this magical island",
         "place":"Kuala Lumpur, Malaysia",
         "price":1200,
         "advantages":[
@@ -86,10 +86,10 @@
     },
     {
         "id":6,
-        "title":"A Good Traveler Has No Fixed Plans And Is Not Intent On Arriving.",
-        "discription":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown to printer took a galley of type and scrambled it to make a type specimen book. It has that's survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
-        "place":"Kuala Lumpur, Malaysia",
+        "title":"3 Days Singapore Universal Studios",
+        "discription":"Visit River Safari in Singapore for a wildlife experience themed around the world's freshwater rivers. Wander around multiple river habitats, from the Yangtze to the Mississippi, to encounter animals of all types, including the beloved giant panda. Learn about the native animals and plants that are found around the world's legendary rivers, and take a boat ride on the Amazon River, if you wish (own expense). Hotel pickup and drop-off are included",
         "price":1250,
+        "place":"Singapore, Singapore",
         "advantages":[
             "Cruise dinner & music event",
             "3 Meal per day",

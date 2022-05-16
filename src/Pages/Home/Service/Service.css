@@ -1,0 +1,7 @@
+.service {
+    transition:all .5s  ease-in-out;
+    border-radius: 7px 7px 20px 20px;
+}
+.service :Hover{
+    transition:all .5s  ease-in-out;
+}

@@ -1,5 +1,6 @@
 
 import './App.css';
+import AOS from 'aos';
 import Header from './Pages/Shared/Header/Header';
 import Footer from './Pages/Shared/Footer/Footer';
 import { Route, Routes } from 'react-router-dom';
@@ -15,8 +16,14 @@ import Ragistration from './Pages/Registration/Ragistration';
 import Done from './Pages/Done/Done';
 import RequireAuth from './Pages/Shared/RequireAuth/RequireAuth';
 import ResetPassword from './Pages/ResetPassword/ResetPassword';
+import { useEffect } from 'react';
 
 function App() {
+  useEffect(() => {
+    AOS.init({
+      duration: "1000"
+    });
+  }, [])
   return (
     <div className="App">
       <Header></Header>

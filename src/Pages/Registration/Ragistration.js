@@ -52,7 +52,7 @@ const Ragistration = () => {
             <div className="w-[320px] sm:w-6/12 md:w-5/12 lg:w-4/12">
                 <h1 className='text-center font-bold text-2xl md:text-4xl'>Ragistration</h1>
 
-                <form onSubmit={handleRagistration} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+                <form data-aos="fade-left" onSubmit={handleRagistration} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
                     <div className="mb-4">
                         <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
                             Name

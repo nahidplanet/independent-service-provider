@@ -28,7 +28,7 @@ const SocialLogin = () => {
         socialSinginError = <p className='text-red-600 text-lg font-bold'> {errorG?.message} {errorFB?.message} {errorGit?.message} </p>
     }
     return (
-        <div className='flex justify-center w-full'>
+        <div data-aos="fade-right" className='flex justify-center w-full'>
             <div className='w-full'>
                 <div className='flex justify-center items-center'>
                     <div className='w-4/12 h-[1px] bg-slate-700'></div>

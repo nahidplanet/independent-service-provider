@@ -39,9 +39,9 @@ const Login = () => {
         <div>
             <div className='flex justify-center items-center h-[100vh]'>
                 <div className=" w-[320px] sm:w-6/12 md:w-5/12 lg:w-4/12">
-                    <h1 className='text-center font-bold text-2xl md:text-4xl'>Login</h1>
+                    <h1 className='text-center font-bold text-2xl md:text-4xl mt-10'>Login</h1>
 
-                    <form onSubmit={handleSingin} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+                    <form data-aos="fade-left" onSubmit={handleSingin} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
                         <div className="mb-4">
                             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
                                 Email
