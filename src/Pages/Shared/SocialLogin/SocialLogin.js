@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSignInWithFacebook, useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../Firebase/firebase.init';
 import facebook from '../../../images/icons/facebook.svg';
 import github from '../../../images/icons/github.svg';
@@ -10,13 +10,16 @@ import Loader from '../../Shared/Loader/Loader'
 const SocialLogin = () => {
 
     const navigate = useNavigate();
+    let location = useLocation();
+    let from = location?.state?.from?.pathname || "/";
+
     const [signInWithGoogle, userG, loadingG, errorG] = useSignInWithGoogle(auth, { sendEmailVerification: true });
     const [signInWithGithub, userGit, loadingGit, errorGit] = useSignInWithGithub(auth);
     const [signInWithFacebook, userFB, loadingFB, errorFB] = useSignInWithFacebook(auth);
     let socialSinginError;
 
     if (userG || userGit || userFB) {
-        navigate('/home');
+        navigate(from, { replace: true });
     }
     if (loadingG || loadingGit || loadingFB) {
         return <Loader></Loader>

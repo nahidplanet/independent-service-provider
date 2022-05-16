@@ -21,7 +21,7 @@ const Login = () => {
     if (error) {
         emailSinginError = <p className='text-red-600 text-lg font-bold'>{error?.message}</p>
     }
-    let from = location.state?.from?.pathname || "/";
+    let from = location?.state?.from?.pathname || "/";
 
     const handleSingin = (e) => {
         e.preventDefault();
@@ -30,7 +30,6 @@ const Login = () => {
         createUserWithEmailAndPassword(email, password);
     }
     if (user) {
-        console.log(user);
         navigate(from, { replace: true });
     }
     if (loading) {
