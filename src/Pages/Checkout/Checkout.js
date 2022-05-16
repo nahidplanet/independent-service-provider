@@ -13,7 +13,6 @@ const Checkout = () => {
     if (user) {
         userName = user.displayName;
         userEmail = user.email;
-        console.log(user);
     }
     return (
         <div>
@@ -61,7 +60,6 @@ const Checkout = () => {
                                 Confirm
                             </button>
                         </div>
-                        <p className='font-bold text-gray-700 text-sm mt-2 text-center'>Already Have a Account? <span className='text-[#cca001] cursor-pointer'>Login</span></p>
                     </form>
                 </div>
             </div>

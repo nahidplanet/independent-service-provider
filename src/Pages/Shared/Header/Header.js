@@ -24,7 +24,7 @@ const Header = () => {
 
     return (
         <header className=''>
-            <nav className="bg-white border-gray-200 px-2 sm:px-4 py-4  dark:bg-gray-800 ">
+            <nav className="border-gray-200 px-2 sm:px-4 py-4  bg-gray-800 ">
                 <div className="container flex flex-wrap justify-between items-center mx-auto ">
                     <Link to={"/"} href="https://flowbite.com" className="flex items-center">
                         <img src="https://i.ibb.co/6H8HnYH/10028.png" className="mr-3 h-8 sm:h-9" alt="Logo" />
@@ -75,9 +75,6 @@ const Header = () => {
                             <li>
                                 <CustomLink to={'/home'} className="block py-2 pr-4 pl-3  border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 md:text-md"  >Home</CustomLink>
                             </li>
-                            {/* <li>
-                                <CustomLink to={'/services'} className="block py-2 pr-4 pl-3  border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 md:text-md">Service</CustomLink>
-                            </li> */}
                             <li>
                                 <CustomLink to={'/blog'} className="block py-2 pr-4 pl-3  border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 md:text-md">Blog</CustomLink>
                             </li>
