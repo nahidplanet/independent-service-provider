@@ -1,0 +1,8 @@
+.blog-one{
+    background-image:linear-gradient(to right ,#1F2937,#029E9D);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 0 auto;
+    padding: 80px 60px;
+}
